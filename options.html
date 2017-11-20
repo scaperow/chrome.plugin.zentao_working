@@ -1,0 +1,64 @@
+<html lang="zh_cn">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="lib/jquery.min.js" type="text/javascript"></script>
+    <script src="lib/underscore.min.js" type="text/javascript"></script>
+    <script src="options.js" type="text/javascript"></script>
+    <link href="lib/pure.css" rel="stylesheet">
+    <style>
+        html,
+        body {
+            background: #ececec;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        #form {
+            background: #ffffff;
+            padding: 12px;
+            width: 300px;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        .action {
+            border: none;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 12px;
+            margin-top: 12px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form" class="pure-form pure-form-stacked">
+        <fieldset>
+            <legend>
+                <h2>Config</h2>
+            </legend>
+
+            <label for="siteUrl">SITE URL</label>
+            <input id="siteUrl" type="url" placeholder="The zentao url" required>
+
+            <label for="serviceUrl">SERVICE URL</label>
+            <input id="serviceUrl" type="url" placeholder="The url where is task access" required>
+
+            <label for="bugUrl">BUG DETAIL URL PATTERN(Use <strong>${0}</strong>to replace the bug id in url)</label>
+            <input id="bugUrl" type="url" placeholder="The page url where is bug detail" required>
+
+            <label for="times">LOOP TIMES</label>
+            <input id="times" type="number" min="5000" value="5000" placeholder="How long does it take in a background task" required>
+
+
+            <div class="action">
+                <button type="submit" class="pure-button pure-button-primary">Save</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
